@@ -1,7 +1,7 @@
-import { version } from '@/../package.json';
+import app from '@/../package.json';
 
 function State () {
-  this.version = version;
+  this.version = app.version;
 
   this.session = null;
   this.loading = false;

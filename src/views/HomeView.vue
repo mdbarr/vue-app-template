@@ -1,12 +1,12 @@
 <template>
-  <div />
+  <v-container />
 </template>
 
 <script>
 import state from '@/state';
 
 export default {
-  name: 'Home',
+  name: 'HomeView',
   data () {
     return { state };
   },

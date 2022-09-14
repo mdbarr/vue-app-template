@@ -2,16 +2,16 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 
 import state from '@/state';
-import Home from '@/views/Home';
+import HomeView from '@/views/HomeView';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    name: 'home',
+    name: 'home-view',
     path: '/',
-    meta: { title: 'Home' },
-    component: Home,
+    meta: { title: 'HomeView' },
+    component: HomeView,
   },
 ];
 

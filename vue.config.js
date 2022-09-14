@@ -1,11 +1,13 @@
+const { defineConfig } = require('@vue/cli-service');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
-module.exports = {
-  configureWebpack: { plugins: [ new StyleLintPlugin({ files: [ 'src/**/*.{vue,css}' ] }) ] },
-  devServer: {
-    host: '0.0.0.0',
-    disableHostCheck: true,
+module.exports = defineConfig({
+  configureWebpack: {
+    plugins: [
+      new MomentLocalesPlugin(),
+      new StyleLintPlugin({ files: [ 'src/**/*.{vue,css}' ] }),
+    ],
   },
-  filenameHashing: process.env.NODE_ENV !== 'production',
   transpileDependencies: [ 'vuetify' ],
-};
+});
